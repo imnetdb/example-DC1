@@ -15,6 +15,7 @@
 #  limitations under the License.
 
 import fire
+import json
 from itertools import product
 from operator import itemgetter
 
@@ -57,93 +58,112 @@ class MyLeafStencil(AristaDCS7050X3m48YC8):
 
     INTERFACES_SPEC = [
         (expand("Ethernet[1-48]"),  dict(speed=10,  role='leaf-server')),
-        (expand("Ethernet[49-54"),  dict(speed=100, role='leaf-spine')),
+        (expand("Ethernet[49-54]"),  dict(speed=100, role='leaf-spine')),
         (expand("Ethernet[55-56]"), dict(speed=100, role='pair'))
     ]
-
-
-def get_db():
-    return IMNetDB(db_name=TOPOLOGY['name'], password='admin123')
 
 
 def define_name(role, num):
     return "{role}{num:02}".format(role=role, num=num)
 
 
-def reset():
-    print("Reset database: {} ... ".format(TOPOLOGY['name']), end='')
-    get_db().reset_database()
-    print("OK")
+class Builder(object):
 
+    def __init__(self):
+        self.db = IMNetDB(db_name=TOPOLOGY['name'], password='admin123')
 
-def ensure_rack(db, rack_num, stencil):
-    rack_name = define_name('rack', rack_num)
-    print("... {} ... ".format(rack_name), flush=True, end='')
-    leaf1_num = (rack_num - 1) * 2 + 1
-    leaf2_num = leaf1_num + 1
-
-    group_node = db.device_groups.ensure(rack_name, rack_id=rack_num)
-
-    l1_name = define_name(stencil.ROLE, leaf1_num)
-    print(f"{l1_name} ... ", flush=True, end='')
-    l1 = stencil(db, l1_name, role=stencil.ROLE, peer_id=0, rack_id=rack_num)
-
-    l2_name = define_name(stencil.ROLE, leaf2_num)
-    print(f"{l2_name} ... ", flush=True, end='')
-    l2 = stencil(db, l2_name, role=stencil.ROLE, peer_id=1, rack_id=rack_num)
-
-    db.device_groups.add_member(group_node, l1.nodes['device'])
-    db.device_groups.add_member(group_node, l2.nodes['device'])
-    print("OK", flush=True)
-
-
-def ensure_devices():
-    print("Ensure devices: {} ... ".format(TOPOLOGY['name']), flush=True)
-
-    db = get_db()
-
-    stencil = MySpineStencil
-
-    # create the SPINE devices
-
-    for spine_num in range(1, TOPOLOGY['spines'] + 1):
-        device_name = define_name(stencil.ROLE, spine_num)
-        print("... {} ... ".format(device_name), flush=True, end='')
-        stencil(db, device_name, role=stencil.ROLE, spine_id=spine_num)
+    def reset(self):
+        print("Reset database: {} ... ".format(TOPOLOGY['name']), end='')
+        self.db.reset_database()
         print("OK")
+        return self
 
-    # create the LEAF devices in 2 per RACK formation
+    def ensure_rack(self, rack_num, stencil):
+        db = self.db
 
-    for rack_num in range(1, TOPOLOGY['racks'] + 1):
-        ensure_rack(db, rack_num, stencil=MyLeafStencil)
+        rack_name = define_name('rack', rack_num)
+        print("... {} ... ".format(rack_name), flush=True, end='')
+        leaf1_num = (rack_num - 1) * 2 + 1
+        leaf2_num = leaf1_num + 1
 
-    print("OK")
+        group_node = db.device_groups.ensure(rack_name, rack_id=rack_num)
 
+        l1_name = define_name(stencil.ROLE, leaf1_num)
+        print(f"{l1_name} ... ", flush=True, end='')
+        l1 = stencil(db, l1_name, role=stencil.ROLE, leaf_id=leaf1_num, peer_id=0, rack_id=rack_num)
 
-def ensure_cabling():
-    db = get_db()
+        l2_name = define_name(stencil.ROLE, leaf2_num)
+        print(f"{l2_name} ... ", flush=True, end='')
+        l2 = stencil(db, l2_name, role=stencil.ROLE, leaf_id=leaf2_num, peer_id=1, rack_id=rack_num)
 
-    name = itemgetter('name')
+        db.device_groups.add_member(group_node, l1.nodes['device'])
+        db.device_groups.add_member(group_node, l2.nodes['device'])
+        print("OK", flush=True)
 
-    spine_devs = {
-        name(dev): dev
-        for dev in db.devices.col.find({'role': 'spine'})
-    }
+    def ensure_devices(self):
+        print("Ensure devices: {} ... ".format(TOPOLOGY['name']), flush=True)
 
-    leaf_devs = {
-        name(dev): dev
-        for dev in db.devices.col.find({'role': 'leaf'})
-    }
+        db = self.db
 
-    topo_spine_leaf = product(spine_devs, leaf_devs)
+        stencil = MySpineStencil
 
-    import pdb
-    pdb.set_trace()
+        # create the SPINE devices
+
+        for spine_num in range(1, TOPOLOGY['spines'] + 1):
+            device_name = define_name(stencil.ROLE, spine_num)
+            print("... {} ... ".format(device_name), flush=True, end='')
+            stencil(db, device_name, role=stencil.ROLE, spine_id=spine_num)
+            print("OK")
+
+        # create the LEAF devices in 2 per RACK formation
+
+        for rack_num in range(1, TOPOLOGY['racks'] + 1):
+            self.ensure_rack(rack_num, stencil=MyLeafStencil)
+
+        print("OK")
+        return self
+
+    def ensure_cabling(self):
+        db = self.db
+        topo_name = TOPOLOGY['name']
+
+        name = itemgetter('name')
+
+        print(f"Ensure device cabling: {topo_name} ... ", flush=True, end='')
+
+        spine_devs = {name(dev): dev for dev in db.devices.col.find({'role': 'spine'})}
+        leaf_devs = {name(dev): dev for dev in db.devices.col.find({'role': 'leaf'})}
+
+        cable_map = list()
+
+        for spine_name, leaf_name in product(spine_devs, leaf_devs):
+
+            # get the leaf interface going to the spine device
+
+            leaf_if_node = db.interfaces.pool_take(
+                key=f"{leaf_name} {spine_name}",
+                match={'device': leaf_name,
+                       'role': 'leaf-spine'})
+
+            # get the spine interface going to the leaf device
+
+            spine_if_node = db.interfaces.pool_take(
+                key=f"{spine_name} {leaf_name}",
+                match={'device': spine_name,
+                       'role': 'leaf-spine'})
+
+            # need to cable these two nodes together
+            cable_map.append([leaf_name, leaf_if_node['name'], spine_name, spine_if_node['name']])
+
+        print("OK", flush=True)
+        cable_map_ofile = f"{topo_name}-cable-map.json"
+        print(f"Writing cabling map to {cable_map_ofile} ... ", flush=True, end='')
+        json.dump(cable_map, open(cable_map_ofile, 'w+'), indent=3)
+        print("OK", flush=True)
+
+    def quiet(self):
+        return None
 
 
 if __name__ == "__main__":
-    fire.Fire({
-        'reset': reset,
-        'devices': ensure_devices,
-        'cabling': ensure_cabling
-    })
+    fire.Fire(Builder)
