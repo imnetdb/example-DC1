@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+
+#  Copyright 2019 Jeremy Schulman, nwkautomaniac@gmail.com
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+
+import sys
+import fire
+import yaml
+
+from clos_db import TwoStageL3ClosDB
+
+import loopback_ips
+import fabric_ips
+import cabling
+import topology
+
+
+class Builder(object):
+
+    def __init__(self):
+        self.config = yaml.load(open('config.yml'))
+        self.name = self.config['name']
+        self.db = TwoStageL3ClosDB(db_name=self.name, password='admin123')
+
+    def end_quietly(self):
+        return ''
+
+    def reset(self):
+        print("Reset database: {} ... ".format(self.name), end='')
+        self.db.reset_database()
+        print("OK")
+        return self
+
+    def topology(self):
+        topology.ensure(clos=self)
+        return self
+
+    def cabling(self):
+        cabling.ensure(clos=self)
+        return self
+
+    def assign_loopback_ips(self):
+        loopback_ips.ensure(clos=self)
+        return self
+
+    def assign_fabric_ips(self):
+        fabric_ips.ensure(clos=self)
+        return self
+
+
+if __name__ == "__main__":
+    sys.argv.append('end_quietly')
+    fire.Fire(Builder)
