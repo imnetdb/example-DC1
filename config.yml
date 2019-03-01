@@ -18,6 +18,7 @@ fabric_ip_subnet: 12.12.2.0/24
 
 architectural-decisions:
   - leaf-asn-shared-rack
+#  - leaf-asn-unique
   - spine-asn-unique
 
 asn_spine_range: [10, 20]

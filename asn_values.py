@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #  Copyright 2019 Jeremy Schulman, nwkautomaniac@gmail.com
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,10 +13,9 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-import json
 import fire
-import ipaddress
 import csv
+
 from clos_db import get_clos_db
 
 import querys
@@ -31,19 +31,19 @@ def _populate_pools(clos):
     print("Create ASN pools.")
 
 
-def _ensure_spine_asn_values(clos):
-    asn_pool = clos.db.asn_pools['spine']
+def _ensure_unique_asn_values(clos, role):
+    asn_pool = clos.db.asn_pools[role]
     dev_col = clos.db.devices.col
 
-    for dev in querys.get_devices(clos.db, role='spine'):
-        taken = asn_pool.take({'spine': dev['name']})
+    for dev in querys.get_devices(clos.db, role=role):
+        taken = asn_pool.take({role: dev['name']})
         dev['asn'] = taken['value']
         dev_col.update(dev)
 
-    print("Spine ASN values assigned.")
+    print(f"{role.capitalize()} ASN values assigned.")
 
 
-def _ensure_leaf_asn_values(clos):
+def _ensure_leaf_asn_rack_values(clos):
     asn_pool = clos.db.asn_pools['leaf']
     dev_col = clos.db.devices.col
 
@@ -55,7 +55,26 @@ def _ensure_leaf_asn_values(clos):
             leaf_dev['asn'] = rack_asn
             dev_col.update(leaf_dev)
 
-    print("Leaf ASN values assigned")
+    print("Rack-Leaf ASN values assigned")
+
+
+def reset():
+    closdb = get_clos_db()
+    for asn_pool in closdb.asn_pools.values():
+        asn_pool.reset()
+    print("ASN pools cleared.")
+
+
+def save_csv():
+    closdb = get_clos_db()
+    with open(f"{closdb.db_name}-asn-values.csv", 'w+') as ofile:
+        csv_wr = csv.writer(ofile)
+        for dev in closdb.devices:
+            if 'asn' not in dev:
+                continue
+            csv_wr.writerow([dev['name'], dev['asn']])
+
+    print(f"ASN values written to {ofile.name}")
 
 
 def ensure(clos):
@@ -63,5 +82,16 @@ def ensure(clos):
     if clos.db.asn_pools['leaf'].col.count() == 0:
         _populate_pools(clos)
 
-    _ensure_spine_asn_values(clos)
-    _ensure_leaf_asn_values(clos)
+    _ensure_unique_asn_values(clos, 'spine')
+
+    if 'leaf-asn-shared-rack' in clos.config['architectural-decisions']:
+        _ensure_leaf_asn_rack_values(clos)
+    else:
+        _ensure_unique_asn_values(clos, 'leaf')
+
+
+if __name__ == "__main__":
+    fire.Fire({
+        'reset': reset,
+        'save': save_csv}
+    )
