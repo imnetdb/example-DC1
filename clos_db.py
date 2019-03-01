@@ -32,6 +32,10 @@ class TwoStageL3ClosDB(IMNetDB):
         # create a global routing-table for IP address management
         self.rt_global = self.routing_tables.ensure('global')
 
+        self.asn_pools = {}
+        self.asn_pools['leaf'] = self.resource_pool('RP_ASN_leaf', value_type=int)
+        self.asn_pools['spine'] = self.resource_pool('RP_ASN_spine', value_type=int)
+
 
 def get_clos_db():
     config = yaml.load(open('config.yml'))

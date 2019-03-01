@@ -1,9 +1,10 @@
 ---
-name: 'DC1'
+name: DC1
 
 spines: 2
 
 # each rack will have two leaf switches
+
 racks: 8
 
 # 30 hosts for the loopbacks from this subnet
@@ -14,3 +15,10 @@ loopback_ip_subnet: 12.12.1.0/27
 # chopped into /31 spaces for each p2p link
 
 fabric_ip_subnet: 12.12.2.0/24
+
+architectural-decisions:
+  - leaf-asn-shared-rack
+  - spine-asn-unique
+
+asn_spine_range: [10, 20]
+asn_leaf_range:  [64512, 65600]

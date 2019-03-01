@@ -30,7 +30,39 @@ FOR cable in Cable
 """
 
 
-def get_cabling(clos, role='leaf-spine'):
-    return list(clos.query(_query_cabling, bind_vars={
+def get_cabling(db, role='leaf-spine'):
+    return list(db.query(_query_cabling, bind_vars={
         'cable_role': role
     }))
+
+
+_query_device_role = """
+FOR dev in Device
+    FILTER dev.role == @role
+    RETURN dev
+"""
+
+
+def get_devices(db, role):
+    return list(db.query(_query_device_role, bind_vars={
+        'role': role
+    }))
+
+
+_query_get_rack_groups = """
+for group in DeviceGroup
+    FILTER group.rack_id != null
+    LET leaf_nodes = (
+        FOR dev_node IN INBOUND group device_member
+            FILTER dev_node.role == 'leaf'
+            RETURN dev_node
+    )
+    return {
+        rack: group,
+        devices: leaf_nodes
+    }
+"""
+
+
+def get_rack_groups(db):
+    return list(db.query(_query_get_rack_groups))

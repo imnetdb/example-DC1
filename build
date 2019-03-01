@@ -17,6 +17,7 @@
 import sys
 import fire
 import yaml
+from functools import lru_cache
 
 from clos_db import TwoStageL3ClosDB
 
@@ -24,7 +25,7 @@ import loopback_ips
 import fabric_ips
 import cabling
 import topology
-
+import asn_values
 
 class Builder(object):
 
@@ -50,13 +51,18 @@ class Builder(object):
         cabling.ensure(clos=self)
         return self
 
-    def assign_loopback_ips(self):
+    def loopback_ips(self):
         loopback_ips.ensure(clos=self)
         return self
 
-    def assign_fabric_ips(self):
+    def fabric_ips(self):
         fabric_ips.ensure(clos=self)
         return self
+
+    def asn_values(self):
+        asn_values.ensure(clos=self)
+        return self
+
 
 
 if __name__ == "__main__":

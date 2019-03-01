@@ -16,12 +16,12 @@
 import json
 from collections import defaultdict
 from itertools import product
-from operator import itemgetter
 
 import fire
 
 
 from clos_db import get_clos_db
+import querys
 
 
 def _ensure_leaf_spine_cabling(clos, spine_devs, leaf_devs):
@@ -71,14 +71,11 @@ def _ensure_leaf_pair_cabling(clos, leaf_devs):
 
 
 def ensure(clos):
-    db = clos.db
-
-    name = itemgetter('name')
 
     print(f"Ensure device cabling: {clos.name} ... ", flush=True, end='')
 
-    spine_devs = {name(dev): dev for dev in db.devices.col.find({'role': 'spine'})}
-    leaf_devs = {name(dev): dev for dev in db.devices.col.find({'role': 'leaf'})}
+    spine_devs = {dev['name']: dev for dev in querys.get_devices(clos.db, role='spine')}
+    leaf_devs = {dev['name']: dev for dev in querys.get_devices(clos.db, role='leaf')}
 
     _ensure_leaf_spine_cabling(clos, spine_devs, leaf_devs)
     _ensure_leaf_pair_cabling(clos, leaf_devs)
