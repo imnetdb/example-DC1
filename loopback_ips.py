@@ -15,18 +15,24 @@
 import ipaddress
 
 
-def ensure(clos):
-
-    loopback_ips = clos.db.loopback_ips
+def _ensure_pool(clos, pool):
 
     # see if we need to populate the loopback IP pool. We will check the DB collection count
     # to see if it is empty. if it is, then we'll populate the pool with loopback host IPs.
 
-    if loopback_ips.col.count() == 0:
-        lo_net = ipaddress.ip_network(clos.config['loopback_ip_subnet'])
+    subnet = clos.config['ip-assignments']['loopback_ip_subnet']
+    if pool.col.count() == 0:
+        lo_net = ipaddress.ip_network(subnet)
         num_hosts = lo_net.num_addresses - 2
         print(f"Build loopback IP pool: {lo_net} num-hosts {num_hosts}")
-        loopback_ips.add_batch(lo_net.hosts())
+        pool.add_batch(lo_net.hosts())
+
+
+def ensure(clos):
+
+    loopback_ips = clos.db.loopback_ips
+
+    _ensure_pool(clos, loopback_ips)
 
     # next assign a loopback IP for each device and store the value into the device node as
     # a field called "lo_inet".

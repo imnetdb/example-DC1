@@ -1,29 +1,41 @@
 name = "DC1"
 
-spines = 2
-
-# each rack will have two leaf switches
-
-racks = 8
-
-# 30 hosts for the loopbacks from this subnet
-
-loopback_ip_subnet = "12.12.1.0/27"
-
-# need a subnet for making leaf-spine p2p interface IPs.  This /24 will be
-# chopped into /31 spaces for each p2p link
-
-fabric_ip_subnet = "12.12.2.0/24"
-
 architectural-decisions = [
 
-  "leaf-asn-shared-rack",
-  # "leaf-asn-unique"
+  "rack-dual-leaf-lag",         # each rack with have 2 leaf switch; peer interfaces configured in LAG
+                                # the lag name is currently hardcoded to Lag0 in cabling.py
 
-  "spine-asn-unique"
-  # "spine-asn-shared"
+  # "rack-dual-leaf",             # each rack with have 2 leaf switch; peer interfaces p2p
+
+  "rack-leaf-asn-shared",       # leaf devices in rack share the same ASN
+  # "rack-leaf-asn-unique",       # each leaf gets a unique ASN
+
+  "spine-asn-unique"            # each spine gets a unqiue ASN
+  # "spine-asn-shared"          # all spines use the same ASN
 
 ]
+
+[topology]
+
+    # spines are hardcoded to use an Arista 32x100g switch
+    spines = 2
+
+    # racks are hardcoded to use two Arista 48x[10|25] + 12x100g switches
+    racks = 8
+
+    leaf-spine-interface-count = 1
+    leaf-pair-interface-count = 2
+
+[ip-assignments]
+
+    # 30 hosts for the loopbacks from this subnet
+    loopback_ip_subnet = "12.12.1.0/27"
+
+    # need a subnet for making leaf-spine p2p interface IPs.  This /24 will be
+    # chopped into /31 spaces for each p2p link
+
+    fabric_ip_subnet = "12.12.2.0/24"
+
 
 [asn-values]
     spine-range = [10, 20]

@@ -15,7 +15,7 @@
 from bracket_expansion import expand
 
 from imnetdb.devicestencils.arista.DCS7050X3 import (
-    AristaDCS7050X3m48YC8,
+    AristaDCS7050X3m48YC12,
     AristaDCS7050X3m32S)
 
 
@@ -28,25 +28,25 @@ class MySpineStencil(AristaDCS7050X3m32S):
     SPEC_NAME = "32x100g"
 
     INTERFACES_SPEC = [
-        (("Loopback0", ), dict(role='loopback')),
-        (expand("Ethernet[1-32]"), dict(speed=100, role='leaf-spine'))
+        (("Loopback0", ),           dict(role='loopback')),
+        (expand("Ethernet[1-32]"),  dict(speed=100, role='leaf-spine'))
     ]
 
 
-class MyLeafStencil(AristaDCS7050X3m48YC8):
+class MyLeafStencil(AristaDCS7050X3m48YC12):
     """
     Define a leaf switch providing 48x10g + 8x100g defined:
         - 48x10g for leaf-server links
-        - 6x100g for leaf-spine links
+        - 10x100g for leaf-spine links
         - 2x100g for leaf pair links
     """
     ROLE = 'leaf'
 
-    SPEC_NAME = '48x10g+100g'
+    SPEC_NAME = '48x10g+12x100g'
 
     INTERFACES_SPEC = [
-        (("Loopback0", ), dict(role='loopback')),
-        (expand("Ethernet[1-48]"),  dict(speed=10,  role='leaf-server')),
-        (expand("Ethernet[49-54]"),  dict(speed=100, role='leaf-spine')),
-        (expand("Ethernet[55-56]"), dict(speed=100, role='leaf-pair'))
+        (("Loopback0", ),            dict(role='loopback')),
+        (expand("Ethernet[1-48]"),   dict(speed=10,  role='leaf-server')),
+        (expand("Ethernet[49-58]"),  dict(speed=100, role='leaf-spine')),
+        (expand("Ethernet[59-60]"),  dict(speed=100, role='leaf-pair'))
     ]

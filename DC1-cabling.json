@@ -1,25 +1,25 @@
 [
    {
       "cable": {
-         "_key": "258187",
-         "_id": "Cable/258187",
-         "_rev": "_YRnyfcm--_",
+         "_key": "427635",
+         "_id": "Cable/427635",
+         "_rev": "_YR7ylS---_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "248752",
-            "_id": "Interface/248752",
-            "_rev": "_YRnyPte--_",
+            "_key": "422000",
+            "_id": "Interface/422000",
+            "_rev": "_YR7ybq2--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf01",
             "name": "Ethernet49"
          },
          {
-            "_key": "248065",
-            "_id": "Interface/248065",
-            "_rev": "_YRnyOeu--_",
+            "_key": "421313",
+            "_id": "Interface/421313",
+            "_rev": "_YR7yagC--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -29,25 +29,25 @@
    },
    {
       "cable": {
-         "_key": "258199",
-         "_id": "Cable/258199",
-         "_rev": "_YRnyfeu--_",
+         "_key": "427647",
+         "_id": "Cable/427647",
+         "_rev": "_YR7ylUG--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "249095",
-            "_id": "Interface/249095",
-            "_rev": "_YRnyQUq--_",
+            "_key": "422367",
+            "_id": "Interface/422367",
+            "_rev": "_YR7ycSa--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf02",
             "name": "Ethernet49"
          },
          {
-            "_key": "248071",
-            "_id": "Interface/248071",
-            "_rev": "_YRnyOfi--_",
+            "_key": "421319",
+            "_id": "Interface/421319",
+            "_rev": "_YR7yagy--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -57,25 +57,25 @@
    },
    {
       "cable": {
-         "_key": "258211",
-         "_id": "Cable/258211",
-         "_rev": "_YRnyfg2--_",
+         "_key": "427659",
+         "_id": "Cable/427659",
+         "_rev": "_YR7ylWW--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "249443",
-            "_id": "Interface/249443",
-            "_rev": "_YRnyQ9K--_",
+            "_key": "422739",
+            "_id": "Interface/422739",
+            "_rev": "_YR7yc5m--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf03",
             "name": "Ethernet49"
          },
          {
-            "_key": "248077",
-            "_id": "Interface/248077",
-            "_rev": "_YRnyOgK--_",
+            "_key": "421325",
+            "_id": "Interface/421325",
+            "_rev": "_YR7yahW--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -85,25 +85,25 @@
    },
    {
       "cable": {
-         "_key": "258223",
-         "_id": "Cable/258223",
-         "_rev": "_YRnyfi6--_",
+         "_key": "427671",
+         "_id": "Cable/427671",
+         "_rev": "_YR7ylYq--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "249786",
-            "_id": "Interface/249786",
-            "_rev": "_YRnyRkm--_",
+            "_key": "423106",
+            "_id": "Interface/423106",
+            "_rev": "_YR7ydgy--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf04",
             "name": "Ethernet49"
          },
          {
-            "_key": "248083",
-            "_id": "Interface/248083",
-            "_rev": "_YRnyOg2--_",
+            "_key": "421331",
+            "_id": "Interface/421331",
+            "_rev": "_YR7yaiC--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -113,25 +113,25 @@
    },
    {
       "cable": {
-         "_key": "258235",
-         "_id": "Cable/258235",
-         "_rev": "_YRnyflG--_",
+         "_key": "427683",
+         "_id": "Cable/427683",
+         "_rev": "_YR7ylay--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "250134",
-            "_id": "Interface/250134",
-            "_rev": "_YRnySM6--_",
+            "_key": "423478",
+            "_id": "Interface/423478",
+            "_rev": "_YR7yeJG--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf05",
             "name": "Ethernet49"
          },
          {
-            "_key": "248089",
-            "_id": "Interface/248089",
-            "_rev": "_YRnyOhe--_",
+            "_key": "421337",
+            "_id": "Interface/421337",
+            "_rev": "_YR7yaim--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -141,25 +141,25 @@
    },
    {
       "cable": {
-         "_key": "258247",
-         "_id": "Cable/258247",
-         "_rev": "_YRnyfnS--_",
+         "_key": "427695",
+         "_id": "Cable/427695",
+         "_rev": "_YR7ylc2--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "250482",
-            "_id": "Interface/250482",
-            "_rev": "_YRnyS0i--_",
+            "_key": "423845",
+            "_id": "Interface/423845",
+            "_rev": "_YR7yewW--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf06",
             "name": "Ethernet49"
          },
          {
-            "_key": "248095",
-            "_id": "Interface/248095",
-            "_rev": "_YRnyOiG--_",
+            "_key": "421343",
+            "_id": "Interface/421343",
+            "_rev": "_YR7yajO--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -169,25 +169,25 @@
    },
    {
       "cable": {
-         "_key": "258259",
-         "_id": "Cable/258259",
-         "_rev": "_YRnyfpm--_",
+         "_key": "427707",
+         "_id": "Cable/427707",
+         "_rev": "_YR7ylf---_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "250830",
-            "_id": "Interface/250830",
-            "_rev": "_YRnyTeW--_",
+            "_key": "424222",
+            "_id": "Interface/424222",
+            "_rev": "_YR7yfYa--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf07",
             "name": "Ethernet49"
          },
          {
-            "_key": "248101",
-            "_id": "Interface/248101",
-            "_rev": "_YRnyOiy--_",
+            "_key": "421349",
+            "_id": "Interface/421349",
+            "_rev": "_YR7yaj6--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -197,25 +197,25 @@
    },
    {
       "cable": {
-         "_key": "258271",
-         "_id": "Cable/258271",
-         "_rev": "_YRnyfry--_",
+         "_key": "427719",
+         "_id": "Cable/427719",
+         "_rev": "_YR7ylhG--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "251173",
-            "_id": "Interface/251173",
-            "_rev": "_YRnyUHe--_",
+            "_key": "424589",
+            "_id": "Interface/424589",
+            "_rev": "_YR7yg_u--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf08",
             "name": "Ethernet49"
          },
          {
-            "_key": "248107",
-            "_id": "Interface/248107",
-            "_rev": "_YRnyOji--_",
+            "_key": "421355",
+            "_id": "Interface/421355",
+            "_rev": "_YR7yakm--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -225,25 +225,25 @@
    },
    {
       "cable": {
-         "_key": "258283",
-         "_id": "Cable/258283",
-         "_rev": "_YRnyfuC--_",
+         "_key": "427731",
+         "_id": "Cable/427731",
+         "_rev": "_YR7yljK--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "251521",
-            "_id": "Interface/251521",
-            "_rev": "_YRnyUw2--_",
+            "_key": "424961",
+            "_id": "Interface/424961",
+            "_rev": "_YR7ygom--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf09",
             "name": "Ethernet49"
          },
          {
-            "_key": "248113",
-            "_id": "Interface/248113",
-            "_rev": "_YRnyOkK--_",
+            "_key": "421361",
+            "_id": "Interface/421361",
+            "_rev": "_YR7yalO--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -253,25 +253,25 @@
    },
    {
       "cable": {
-         "_key": "258295",
-         "_id": "Cable/258295",
-         "_rev": "_YRnyfxe--_",
+         "_key": "427743",
+         "_id": "Cable/427743",
+         "_rev": "_YR7yllO--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "251864",
-            "_id": "Interface/251864",
-            "_rev": "_YRnyVa2--_",
+            "_key": "425333",
+            "_id": "Interface/425333",
+            "_rev": "_YR7yhQm--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf10",
             "name": "Ethernet49"
          },
          {
-            "_key": "248119",
-            "_id": "Interface/248119",
-            "_rev": "_YRnyOk2--_",
+            "_key": "421367",
+            "_id": "Interface/421367",
+            "_rev": "_YR7yaly--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -281,25 +281,25 @@
    },
    {
       "cable": {
-         "_key": "258307",
-         "_id": "Cable/258307",
-         "_rev": "_YRnyfzq--_",
+         "_key": "427755",
+         "_id": "Cable/427755",
+         "_rev": "_YR7ylne--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "252212",
-            "_id": "Interface/252212",
-            "_rev": "_YRnyWFK--_",
+            "_key": "425706",
+            "_id": "Interface/425706",
+            "_rev": "_YR7yh5---_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf11",
             "name": "Ethernet49"
          },
          {
-            "_key": "248125",
-            "_id": "Interface/248125",
-            "_rev": "_YRnyOlm--_",
+            "_key": "421373",
+            "_id": "Interface/421373",
+            "_rev": "_YR7yama--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -309,25 +309,25 @@
    },
    {
       "cable": {
-         "_key": "258319",
-         "_id": "Cable/258319",
-         "_rev": "_YRnyf12--_",
+         "_key": "427767",
+         "_id": "Cable/427767",
+         "_rev": "_YR7ylpi--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "252555",
-            "_id": "Interface/252555",
-            "_rev": "_YRnyWte---",
+            "_key": "426073",
+            "_id": "Interface/426073",
+            "_rev": "_YR7yihW--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf12",
             "name": "Ethernet49"
          },
          {
-            "_key": "248131",
-            "_id": "Interface/248131",
-            "_rev": "_YRnyOmS--_",
+            "_key": "421379",
+            "_id": "Interface/421379",
+            "_rev": "_YR7yanG--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -337,25 +337,25 @@
    },
    {
       "cable": {
-         "_key": "258331",
-         "_id": "Cable/258331",
-         "_rev": "_YRnyf4---_",
+         "_key": "427779",
+         "_id": "Cable/427779",
+         "_rev": "_YR7ylrq--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "252903",
-            "_id": "Interface/252903",
-            "_rev": "_YRnyXXW--_",
+            "_key": "426445",
+            "_id": "Interface/426445",
+            "_rev": "_YR7yjKe--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf13",
             "name": "Ethernet49"
          },
          {
-            "_key": "248137",
-            "_id": "Interface/248137",
-            "_rev": "_YRnyOnC--_",
+            "_key": "421385",
+            "_id": "Interface/421385",
+            "_rev": "_YR7yany--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -365,25 +365,25 @@
    },
    {
       "cable": {
-         "_key": "258343",
-         "_id": "Cable/258343",
-         "_rev": "_YRnyf6G--_",
+         "_key": "427791",
+         "_id": "Cable/427791",
+         "_rev": "_YR7ylty--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "253246",
-            "_id": "Interface/253246",
-            "_rev": "_YRnyYAm--_",
+            "_key": "426812",
+            "_id": "Interface/426812",
+            "_rev": "_YR7yj0---_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf14",
             "name": "Ethernet49"
          },
          {
-            "_key": "248143",
-            "_id": "Interface/248143",
-            "_rev": "_YRnyOnu--_",
+            "_key": "421391",
+            "_id": "Interface/421391",
+            "_rev": "_YR7yaoa--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -393,25 +393,25 @@
    },
    {
       "cable": {
-         "_key": "258355",
-         "_id": "Cable/258355",
-         "_rev": "_YRnyf8O--_",
+         "_key": "427803",
+         "_id": "Cable/427803",
+         "_rev": "_YR7ylv6--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "253594",
-            "_id": "Interface/253594",
-            "_rev": "_YRnyYq---_",
+            "_key": "427184",
+            "_id": "Interface/427184",
+            "_rev": "_YR7yke----",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf15",
             "name": "Ethernet49"
          },
          {
-            "_key": "248149",
-            "_id": "Interface/248149",
-            "_rev": "_YRnyOoa--_",
+            "_key": "421397",
+            "_id": "Interface/421397",
+            "_rev": "_YR7yapC--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -421,25 +421,25 @@
    },
    {
       "cable": {
-         "_key": "258367",
-         "_id": "Cable/258367",
-         "_rev": "_YRnyg-S--_",
+         "_key": "427815",
+         "_id": "Cable/427815",
+         "_rev": "_YR7ylyC--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "253937",
-            "_id": "Interface/253937",
-            "_rev": "_YRnyZTq--_",
+            "_key": "427551",
+            "_id": "Interface/427551",
+            "_rev": "_YR7ylHe--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf16",
             "name": "Ethernet49"
          },
          {
-            "_key": "248155",
-            "_id": "Interface/248155",
-            "_rev": "_YRnyOpG--_",
+            "_key": "421403",
+            "_id": "Interface/421403",
+            "_rev": "_YR7yapq--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine01",
@@ -449,25 +449,25 @@
    },
    {
       "cable": {
-         "_key": "258379",
-         "_id": "Cable/258379",
-         "_rev": "_YRnygAe--_",
+         "_key": "427827",
+         "_id": "Cable/427827",
+         "_rev": "_YR7yl0G--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "248758",
-            "_id": "Interface/248758",
-            "_rev": "_YRnyPuK--_",
+            "_key": "422006",
+            "_id": "Interface/422006",
+            "_rev": "_YR7ybri--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf01",
             "name": "Ethernet50"
          },
          {
-            "_key": "248264",
-            "_id": "Interface/248264",
-            "_rev": "_YRnyO1y--_",
+            "_key": "421512",
+            "_id": "Interface/421512",
+            "_rev": "_YR7ya1W--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -477,25 +477,25 @@
    },
    {
       "cable": {
-         "_key": "258391",
-         "_id": "Cable/258391",
-         "_rev": "_YRnygCi--_",
+         "_key": "427839",
+         "_id": "Cable/427839",
+         "_rev": "_YR7yl2O--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "249101",
-            "_id": "Interface/249101",
-            "_rev": "_YRnyQVW--_",
+            "_key": "422373",
+            "_id": "Interface/422373",
+            "_rev": "_YR7ycTG--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf02",
             "name": "Ethernet50"
          },
          {
-            "_key": "248270",
-            "_id": "Interface/248270",
-            "_rev": "_YRnyO2i--_",
+            "_key": "421518",
+            "_id": "Interface/421518",
+            "_rev": "_YR7ya2G--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -505,25 +505,25 @@
    },
    {
       "cable": {
-         "_key": "258403",
-         "_id": "Cable/258403",
-         "_rev": "_YRnygEq--_",
+         "_key": "427851",
+         "_id": "Cable/427851",
+         "_rev": "_YR7yl4S--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "249449",
-            "_id": "Interface/249449",
-            "_rev": "_YRnyQ92--_",
+            "_key": "422745",
+            "_id": "Interface/422745",
+            "_rev": "_YR7yc6O--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf03",
             "name": "Ethernet50"
          },
          {
-            "_key": "248276",
-            "_id": "Interface/248276",
-            "_rev": "_YRnyO3O--_",
+            "_key": "421524",
+            "_id": "Interface/421524",
+            "_rev": "_YR7ya2q--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -533,25 +533,25 @@
    },
    {
       "cable": {
-         "_key": "258415",
-         "_id": "Cable/258415",
-         "_rev": "_YRnygGy--_",
+         "_key": "427863",
+         "_id": "Cable/427863",
+         "_rev": "_YR7yl6a--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "249792",
-            "_id": "Interface/249792",
-            "_rev": "_YRnyRlW--_",
+            "_key": "423112",
+            "_id": "Interface/423112",
+            "_rev": "_YR7ydha--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf04",
             "name": "Ethernet50"
          },
          {
-            "_key": "248282",
-            "_id": "Interface/248282",
-            "_rev": "_YRnyO36--_",
+            "_key": "421530",
+            "_id": "Interface/421530",
+            "_rev": "_YR7ya3S--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -561,25 +561,25 @@
    },
    {
       "cable": {
-         "_key": "258427",
-         "_id": "Cable/258427",
-         "_rev": "_YRnygI6--_",
+         "_key": "427875",
+         "_id": "Cable/427875",
+         "_rev": "_YR7yl8i--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "250140",
-            "_id": "Interface/250140",
-            "_rev": "_YRnySNi--_",
+            "_key": "423484",
+            "_id": "Interface/423484",
+            "_rev": "_YR7yeJu--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf05",
             "name": "Ethernet50"
          },
          {
-            "_key": "248288",
-            "_id": "Interface/248288",
-            "_rev": "_YRnyO4m--_",
+            "_key": "421536",
+            "_id": "Interface/421536",
+            "_rev": "_YR7ya36--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -589,25 +589,25 @@
    },
    {
       "cable": {
-         "_key": "258439",
-         "_id": "Cable/258439",
-         "_rev": "_YRnygK2--_",
+         "_key": "427887",
+         "_id": "Cable/427887",
+         "_rev": "_YR7ym-q--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "250488",
-            "_id": "Interface/250488",
-            "_rev": "_YRnyS1S--_",
+            "_key": "423851",
+            "_id": "Interface/423851",
+            "_rev": "_YR7yexC--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf06",
             "name": "Ethernet50"
          },
          {
-            "_key": "248294",
-            "_id": "Interface/248294",
-            "_rev": "_YRnyO5S--_",
+            "_key": "421542",
+            "_id": "Interface/421542",
+            "_rev": "_YR7ya4i--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -617,25 +617,25 @@
    },
    {
       "cable": {
-         "_key": "258451",
-         "_id": "Cable/258451",
-         "_rev": "_YRnygN---_",
+         "_key": "427899",
+         "_id": "Cable/427899",
+         "_rev": "_YR7ymAu--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "250836",
-            "_id": "Interface/250836",
-            "_rev": "_YRnyTfK--_",
+            "_key": "424228",
+            "_id": "Interface/424228",
+            "_rev": "_YR7yfZG--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf07",
             "name": "Ethernet50"
          },
          {
-            "_key": "248300",
-            "_id": "Interface/248300",
-            "_rev": "_YRnyO6---_",
+            "_key": "421548",
+            "_id": "Interface/421548",
+            "_rev": "_YR7ya5K--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -645,25 +645,25 @@
    },
    {
       "cable": {
-         "_key": "258463",
-         "_id": "Cable/258463",
-         "_rev": "_YRnygPG--_",
+         "_key": "427911",
+         "_id": "Cable/427911",
+         "_rev": "_YR7ymCy--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "251179",
-            "_id": "Interface/251179",
-            "_rev": "_YRnyUIK--_",
+            "_key": "424595",
+            "_id": "Interface/424595",
+            "_rev": "_YR7ygAW--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf08",
             "name": "Ethernet50"
          },
          {
-            "_key": "248306",
-            "_id": "Interface/248306",
-            "_rev": "_YRnyO6q--_",
+            "_key": "421554",
+            "_id": "Interface/421554",
+            "_rev": "_YR7ya52--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -673,25 +673,25 @@
    },
    {
       "cable": {
-         "_key": "258475",
-         "_id": "Cable/258475",
-         "_rev": "_YRnygRS--_",
+         "_key": "427923",
+         "_id": "Cable/427923",
+         "_rev": "_YR7ymF---_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "251527",
-            "_id": "Interface/251527",
-            "_rev": "_YRnyUxi--_",
+            "_key": "424967",
+            "_id": "Interface/424967",
+            "_rev": "_YR7ygpO--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf09",
             "name": "Ethernet50"
          },
          {
-            "_key": "248312",
-            "_id": "Interface/248312",
-            "_rev": "_YRnyO7S--_",
+            "_key": "421560",
+            "_id": "Interface/421560",
+            "_rev": "_YR7ya6e--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -701,25 +701,25 @@
    },
    {
       "cable": {
-         "_key": "258487",
-         "_id": "Cable/258487",
-         "_rev": "_YRnygTa--_",
+         "_key": "427935",
+         "_id": "Cable/427935",
+         "_rev": "_YR7ymHG--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "251870",
-            "_id": "Interface/251870",
-            "_rev": "_YRnyVbi--_",
+            "_key": "425339",
+            "_id": "Interface/425339",
+            "_rev": "_YR7yhRO--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf10",
             "name": "Ethernet50"
          },
          {
-            "_key": "248318",
-            "_id": "Interface/248318",
-            "_rev": "_YRnyO8---_",
+            "_key": "421566",
+            "_id": "Interface/421566",
+            "_rev": "_YR7ya7G---",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -729,25 +729,25 @@
    },
    {
       "cable": {
-         "_key": "258499",
-         "_id": "Cable/258499",
-         "_rev": "_YRnygVe--_",
+         "_key": "427947",
+         "_id": "Cable/427947",
+         "_rev": "_YR7ymJO--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "252218",
-            "_id": "Interface/252218",
-            "_rev": "_YRnyWF2--_",
+            "_key": "425712",
+            "_id": "Interface/425712",
+            "_rev": "_YR7yh5m--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf11",
             "name": "Ethernet50"
          },
          {
-            "_key": "248324",
-            "_id": "Interface/248324",
-            "_rev": "_YRnyO8q--_",
+            "_key": "421572",
+            "_id": "Interface/421572",
+            "_rev": "_YR7ya7u--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -757,25 +757,25 @@
    },
    {
       "cable": {
-         "_key": "258511",
-         "_id": "Cable/258511",
-         "_rev": "_YRnygXm--_",
+         "_key": "427959",
+         "_id": "Cable/427959",
+         "_rev": "_YR7ymLW--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "252561",
-            "_id": "Interface/252561",
-            "_rev": "_YRnyWuG--_",
+            "_key": "426079",
+            "_id": "Interface/426079",
+            "_rev": "_YR7yii---_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf12",
             "name": "Ethernet50"
          },
          {
-            "_key": "248330",
-            "_id": "Interface/248330",
-            "_rev": "_YRnyO9S--_",
+            "_key": "421578",
+            "_id": "Interface/421578",
+            "_rev": "_YR7ya8S--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -785,25 +785,25 @@
    },
    {
       "cable": {
-         "_key": "258523",
-         "_id": "Cable/258523",
-         "_rev": "_YRnygZu--_",
+         "_key": "427971",
+         "_id": "Cable/427971",
+         "_rev": "_YR7ymNa--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "252909",
-            "_id": "Interface/252909",
-            "_rev": "_YRnyXYC--_",
+            "_key": "426451",
+            "_id": "Interface/426451",
+            "_rev": "_YR7yjLO--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf13",
             "name": "Ethernet50"
          },
          {
-            "_key": "248336",
-            "_id": "Interface/248336",
-            "_rev": "_YRnyP----_",
+            "_key": "421584",
+            "_id": "Interface/421584",
+            "_rev": "_YR7ya86--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -813,25 +813,25 @@
    },
    {
       "cable": {
-         "_key": "258535",
-         "_id": "Cable/258535",
-         "_rev": "_YRnygby--_",
+         "_key": "427983",
+         "_id": "Cable/427983",
+         "_rev": "_YR7ymPi--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "253252",
-            "_id": "Interface/253252",
-            "_rev": "_YRnyYBW--_",
+            "_key": "426818",
+            "_id": "Interface/426818",
+            "_rev": "_YR7yj0y--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf14",
             "name": "Ethernet50"
          },
          {
-            "_key": "248342",
-            "_id": "Interface/248342",
-            "_rev": "_YRnyP-u--_",
+            "_key": "421590",
+            "_id": "Interface/421590",
+            "_rev": "_YR7ya9i--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -841,25 +841,25 @@
    },
    {
       "cable": {
-         "_key": "258547",
-         "_id": "Cable/258547",
-         "_rev": "_YRnygd2--_",
+         "_key": "427995",
+         "_id": "Cable/427995",
+         "_rev": "_YR7ymRm--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "253600",
-            "_id": "Interface/253600",
-            "_rev": "_YRnyYqq--_",
+            "_key": "427190",
+            "_id": "Interface/427190",
+            "_rev": "_YR7ykeq--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf15",
             "name": "Ethernet50"
          },
          {
-            "_key": "248348",
-            "_id": "Interface/248348",
-            "_rev": "_YRnyP_a--_",
+            "_key": "421596",
+            "_id": "Interface/421596",
+            "_rev": "_YR7yb-K--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -869,25 +869,25 @@
    },
    {
       "cable": {
-         "_key": "258559",
-         "_id": "Cable/258559",
-         "_rev": "_YRnygg---_",
+         "_key": "428007",
+         "_id": "Cable/428007",
+         "_rev": "_YR7ymTq--_",
          "role": "leaf-spine"
       },
       "interfaces": [
          {
-            "_key": "253943",
-            "_id": "Interface/253943",
-            "_rev": "_YRnyZUW--_",
+            "_key": "427557",
+            "_id": "Interface/427557",
+            "_rev": "_YR7ylIK---",
             "speed": 100,
             "role": "leaf-spine",
             "device": "leaf16",
             "name": "Ethernet50"
          },
          {
-            "_key": "248354",
-            "_id": "Interface/248354",
-            "_rev": "_YRnyPAC--_",
+            "_key": "421602",
+            "_id": "Interface/421602",
+            "_rev": "_YR7yb-y--_",
             "speed": 100,
             "role": "leaf-spine",
             "device": "spine02",
@@ -897,225 +897,225 @@
    },
    {
       "cable": {
-         "_key": "258571",
-         "_id": "Cable/258571",
-         "_rev": "_YRnygiC--_",
+         "_key": "428019",
+         "_id": "Cable/428019",
+         "_rev": "_YR7ymVu--_",
          "role": "leaf-pair"
       },
       "interfaces": [
          {
-            "_key": "248788",
-            "_id": "Interface/248788",
-            "_rev": "_YRnyPxm--_",
+            "_key": "422060",
+            "_id": "Interface/422060",
+            "_rev": "_YR7ybxi--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf01",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          },
          {
-            "_key": "249131",
-            "_id": "Interface/249131",
-            "_rev": "_YRnyQYy--_",
+            "_key": "422427",
+            "_id": "Interface/422427",
+            "_rev": "_YR7ycY2--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf02",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          }
       ]
    },
    {
       "cable": {
-         "_key": "258583",
-         "_id": "Cable/258583",
-         "_rev": "_YRnygkG--_",
+         "_key": "428031",
+         "_id": "Cable/428031",
+         "_rev": "_YR7ymXy--_",
          "role": "leaf-pair"
       },
       "interfaces": [
          {
-            "_key": "249479",
-            "_id": "Interface/249479",
-            "_rev": "_YRnyRBa--_",
+            "_key": "422799",
+            "_id": "Interface/422799",
+            "_rev": "_YR7yd_6--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf03",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          },
          {
-            "_key": "249822",
-            "_id": "Interface/249822",
-            "_rev": "_YRnyRou--_",
+            "_key": "423166",
+            "_id": "Interface/423166",
+            "_rev": "_YR7ydnK--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf04",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          }
       ]
    },
    {
       "cable": {
-         "_key": "258595",
-         "_id": "Cable/258595",
-         "_rev": "_YRnygmO--_",
+         "_key": "428043",
+         "_id": "Cable/428043",
+         "_rev": "_YR7ymZ6--_",
          "role": "leaf-pair"
       },
       "interfaces": [
          {
-            "_key": "250170",
-            "_id": "Interface/250170",
-            "_rev": "_YRnySRC--_",
+            "_key": "423538",
+            "_id": "Interface/423538",
+            "_rev": "_YR7yePm--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf05",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          },
          {
-            "_key": "250518",
-            "_id": "Interface/250518",
-            "_rev": "_YRnyS46--_",
+            "_key": "423905",
+            "_id": "Interface/423905",
+            "_rev": "_YR7ye2y--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf06",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          }
       ]
    },
    {
       "cable": {
-         "_key": "258607",
-         "_id": "Cable/258607",
-         "_rev": "_YRnygoO--_",
+         "_key": "428055",
+         "_id": "Cable/428055",
+         "_rev": "_YR7ymb6--_",
          "role": "leaf-pair"
       },
       "interfaces": [
          {
-            "_key": "250866",
-            "_id": "Interface/250866",
-            "_rev": "_YRnyTjC--_",
+            "_key": "424282",
+            "_id": "Interface/424282",
+            "_rev": "_YR7yfey--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf07",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          },
          {
-            "_key": "251209",
-            "_id": "Interface/251209",
-            "_rev": "_YRnyULy--_",
+            "_key": "424649",
+            "_id": "Interface/424649",
+            "_rev": "_YR7ygGO--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf08",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          }
       ]
    },
    {
       "cable": {
-         "_key": "258619",
-         "_id": "Cable/258619",
-         "_rev": "_YRnygqS--_",
+         "_key": "428067",
+         "_id": "Cable/428067",
+         "_rev": "_YR7ymeC--_",
          "role": "leaf-pair"
       },
       "interfaces": [
          {
-            "_key": "251557",
-            "_id": "Interface/251557",
-            "_rev": "_YRnyU1K--_",
+            "_key": "425021",
+            "_id": "Interface/425021",
+            "_rev": "_YR7ygvG--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf09",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          },
          {
-            "_key": "251900",
-            "_id": "Interface/251900",
-            "_rev": "_YRnyVfO--_",
+            "_key": "425393",
+            "_id": "Interface/425393",
+            "_rev": "_YR7yhW6--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf10",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          }
       ]
    },
    {
       "cable": {
-         "_key": "258631",
-         "_id": "Cable/258631",
-         "_rev": "_YRnygsW--_",
+         "_key": "428079",
+         "_id": "Cable/428079",
+         "_rev": "_YR7ymgK--_",
          "role": "leaf-pair"
       },
       "interfaces": [
          {
-            "_key": "252248",
-            "_id": "Interface/252248",
-            "_rev": "_YRnyWJa--_",
+            "_key": "425766",
+            "_id": "Interface/425766",
+            "_rev": "_YR7yi_q--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf11",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          },
          {
-            "_key": "252591",
-            "_id": "Interface/252591",
-            "_rev": "_YRnyWxm--_",
+            "_key": "426133",
+            "_id": "Interface/426133",
+            "_rev": "_YR7yio---_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf12",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          }
       ]
    },
    {
       "cable": {
-         "_key": "258643",
-         "_id": "Cable/258643",
-         "_rev": "_YRnygue--_",
+         "_key": "428091",
+         "_id": "Cable/428091",
+         "_rev": "_YR7ymiK--_",
          "role": "leaf-pair"
       },
       "interfaces": [
          {
-            "_key": "252939",
-            "_id": "Interface/252939",
-            "_rev": "_YRnyXbq--_",
+            "_key": "426505",
+            "_id": "Interface/426505",
+            "_rev": "_YR7yjRa--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf13",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          },
          {
-            "_key": "253282",
-            "_id": "Interface/253282",
-            "_rev": "_YRnyYE2--_",
+            "_key": "426872",
+            "_id": "Interface/426872",
+            "_rev": "_YR7yj6y---",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf14",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          }
       ]
    },
    {
       "cable": {
-         "_key": "258655",
-         "_id": "Cable/258655",
-         "_rev": "_YRnygwq--_",
+         "_key": "428103",
+         "_id": "Cable/428103",
+         "_rev": "_YR7ymkS--_",
          "role": "leaf-pair"
       },
       "interfaces": [
          {
-            "_key": "253630",
-            "_id": "Interface/253630",
-            "_rev": "_YRnyYuS--_",
+            "_key": "427244",
+            "_id": "Interface/427244",
+            "_rev": "_YR7ykku--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf15",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          },
          {
-            "_key": "253973",
-            "_id": "Interface/253973",
-            "_rev": "_YRnyZYC--_",
+            "_key": "427611",
+            "_id": "Interface/427611",
+            "_rev": "_YR7ylOS--_",
             "speed": 100,
             "role": "leaf-pair",
             "device": "leaf16",
-            "name": "Ethernet55"
+            "name": "Ethernet59"
          }
       ]
    }

@@ -57,13 +57,15 @@ def ensure_rack(clos, rack_num, stencil):
 def ensure(clos):
     print("Ensure devices: {} ... ".format(clos.name), flush=True)
 
+    topo_cfg = clos.config['topology']
+
     db = clos.db
 
     stencil = MySpineStencil
 
     # create the SPINE devices
 
-    for spine_num in range(1, clos.config['spines'] + 1):
+    for spine_num in range(1, topo_cfg['spines'] + 1):
         device_name = define_name(stencil.ROLE, spine_num)
         print("... {} ... ".format(device_name), flush=True, end='')
         stencil(db, device_name, role=stencil.ROLE, spine_id=spine_num)
@@ -71,7 +73,7 @@ def ensure(clos):
 
     # create the LEAF devices in 2 per RACK formation
 
-    for rack_num in range(1, clos.config['racks'] + 1):
+    for rack_num in range(1, topo_cfg['racks'] + 1):
         ensure_rack(clos, rack_num, stencil=MyLeafStencil)
 
     print("Devices in database OK", flush=True)

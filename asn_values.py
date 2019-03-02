@@ -106,7 +106,7 @@ def ensure(clos):
     else:
         _ensure_unique_asn_values(clos, 'spine')
 
-    if 'leaf-asn-shared-rack' in deciscions:
+    if "rack-leaf-asn-shared" in deciscions:
         _ensure_leaf_asn_rack_values(clos)
     else:
         _ensure_unique_asn_values(clos, 'leaf')
