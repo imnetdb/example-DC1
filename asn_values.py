@@ -43,6 +43,24 @@ def _ensure_unique_asn_values(clos, role):
     print(f"{role.capitalize()} ASN values assigned.")
 
 
+def _ensure_spine_asn_shared_values(clos):
+    role = 'spine'
+    asn_pool = clos.db.asn_pools[role]
+    dev_col = clos.db.devices.col
+
+    # take a single ASN value to be used for all spine devices
+    taken = asn_pool.take('spine-asn-shared')
+    shared_asn = taken['value']
+
+    # store it into all spine devices
+
+    for dev in querys.get_devices(clos.db, role):
+        dev['asn'] = shared_asn
+        dev_col.update(dev)
+
+    print("Spine shared ASN value assigned.")
+
+
 def _ensure_leaf_asn_rack_values(clos):
     asn_pool = clos.db.asn_pools['leaf']
     dev_col = clos.db.devices.col
@@ -78,13 +96,17 @@ def save_csv():
 
 
 def ensure(clos):
+    deciscions = clos.config['architectural-decisions']
 
     if clos.db.asn_pools['leaf'].col.count() == 0:
         _populate_pools(clos)
 
-    _ensure_unique_asn_values(clos, 'spine')
+    if 'spine-asn-shared' in deciscions:
+        _ensure_spine_asn_shared_values(clos)
+    else:
+        _ensure_unique_asn_values(clos, 'spine')
 
-    if 'leaf-asn-shared-rack' in clos.config['architectural-decisions']:
+    if 'leaf-asn-shared-rack' in deciscions:
         _ensure_leaf_asn_rack_values(clos)
     else:
         _ensure_unique_asn_values(clos, 'leaf')
