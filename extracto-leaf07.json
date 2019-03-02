@@ -1,0 +1,500 @@
+{
+   "device_node": {
+      "asn": 64515,
+      "leaf_id": 7,
+      "lo_inet": "12.12.1.9",
+      "name": "leaf07",
+      "peer_id": 0,
+      "rack_id": 4,
+      "role": "leaf"
+   },
+   "device_peer_nodes": {
+      "leaf08": {
+         "asn": 64515,
+         "leaf_id": 8,
+         "lo_inet": "12.12.1.10",
+         "name": "leaf08",
+         "peer_id": 1,
+         "rack_id": 4,
+         "role": "leaf"
+      },
+      "spine01": {
+         "asn": 10,
+         "lo_inet": "12.12.1.1",
+         "name": "spine01",
+         "role": "spine",
+         "spine_id": 1
+      },
+      "spine02": {
+         "asn": 11,
+         "lo_inet": "12.12.1.2",
+         "name": "spine02",
+         "role": "spine",
+         "spine_id": 2
+      }
+   },
+   "interface_nodes": [
+      {
+         "device": "leaf07",
+         "name": "Loopback0",
+         "role": "loopback"
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet1",
+         "role": "leaf-server",
+         "speed": 10,
+         "vlan_mode": "trunk"
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet2",
+         "role": "leaf-server",
+         "speed": 10,
+         "vlan_mode": "trunk"
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet3",
+         "role": "leaf-server",
+         "speed": 10,
+         "vlan_mode": "trunk"
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet4",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet5",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet6",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet7",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet8",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet9",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet10",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet11",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet12",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet13",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet14",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet15",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet16",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet17",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet18",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet19",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet20",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet21",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet22",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet23",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet24",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet25",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet26",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet27",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet28",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet29",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet30",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet31",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet32",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet33",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet34",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet35",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet36",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet37",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet38",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet39",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet40",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet41",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet42",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet43",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet44",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet45",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet46",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet47",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet48",
+         "role": "leaf-server",
+         "speed": 10
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet49",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet50",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet51",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet52",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet53",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet54",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet55",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet56",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet57",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet58",
+         "role": "leaf-spine",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet59",
+         "role": "leaf-pair",
+         "speed": 100
+      },
+      {
+         "device": "leaf07",
+         "name": "Ethernet60",
+         "role": "leaf-pair",
+         "speed": 100
+      }
+   ],
+   "lag_nodes": [
+      {
+         "device": "leaf07",
+         "name": "Lag0",
+         "role": "leaf-pair"
+      }
+   ],
+   "cabling": {
+      "Ethernet49": {
+         "cable": {
+            "role": "leaf-spine"
+         },
+         "remote": {
+            "device": "spine01",
+            "interface": "Ethernet7"
+         }
+      },
+      "Ethernet50": {
+         "cable": {
+            "role": "leaf-spine"
+         },
+         "remote": {
+            "device": "spine02",
+            "interface": "Ethernet7"
+         }
+      },
+      "Ethernet59": {
+         "cable": {
+            "role": "leaf-pair"
+         },
+         "remote": {
+            "device": "leaf08",
+            "interface": "Ethernet59"
+         }
+      },
+      "Ethernet60": {
+         "cable": {
+            "role": "leaf-pair"
+         },
+         "remote": {
+            "device": "leaf08",
+            "interface": "Ethernet60"
+         }
+      }
+   },
+   "vlan_interfaces": {
+      "Ethernet1": [
+         "omega",
+         "red"
+      ],
+      "Ethernet2": [
+         "alpha",
+         "beta",
+         "omega",
+         "blue"
+      ],
+      "Ethernet3": [
+         "alpha",
+         "beta",
+         "omega",
+         "red",
+         "green",
+         "blue"
+      ]
+   },
+   "vlan_nodes": [
+      {
+         "description": "this is omega",
+         "name": "omega",
+         "vlan_id": 30
+      },
+      {
+         "name": "red",
+         "vlan_id": 100
+      },
+      {
+         "description": "this is alpha",
+         "name": "alpha",
+         "vlan_id": 10
+      },
+      {
+         "description": "this is beta",
+         "name": "beta",
+         "vlan_id": 20
+      },
+      {
+         "name": "blue",
+         "vlan_id": 200
+      },
+      {
+         "name": "green",
+         "vlan_id": 150
+      }
+   ]
+}
