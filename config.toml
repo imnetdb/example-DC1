@@ -31,8 +31,9 @@ architectural-decisions = [
     # 30 hosts for the loopbacks from this subnet
     loopback_ip_subnet = "12.12.1.0/27"
 
-    # need a subnet for making leaf-spine p2p interface IPs.  This /24 will be
-    # chopped into /31 spaces for each p2p link
+    # need a subnet for making p2p interface IPs.  This /24 will be
+    # chopped into /31 spaces for each p2p link.  This pool is used for leaf-spine and leaf-pair
+    # interface connections.
 
     fabric_ip_subnet = "12.12.2.0/24"
 
