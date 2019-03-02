@@ -1,0 +1,79 @@
+name = "DC1"
+
+spines = 2
+
+# each rack will have two leaf switches
+
+racks = 8
+
+# 30 hosts for the loopbacks from this subnet
+
+loopback_ip_subnet = "12.12.1.0/27"
+
+# need a subnet for making leaf-spine p2p interface IPs.  This /24 will be
+# chopped into /31 spaces for each p2p link
+
+fabric_ip_subnet = "12.12.2.0/24"
+
+architectural-decisions = [
+
+  "leaf-asn-shared-rack",
+  # "leaf-asn-unique"
+
+  "spine-asn-unique"
+  # "spine-asn-shared"
+
+]
+
+[asn-values]
+    spine-range = [10, 20]
+    leaf-range = [64512, 65600]
+
+[vlans]
+
+    [vlans.alpha]
+        description = "this is alpha"
+        vlan_id = 10
+        ip_addr = "1.1.1.1/24"
+
+    [vlans.beta]
+        description = "this is beta"
+        vlan_id = 20
+        ip_addr = "1.2.1.1/24"
+
+    [vlans.omega]
+        description = "this is omega"
+        vlan_id = 30
+
+    [vlans.red]
+        vlan_id = 100
+
+    [vlans.green]
+        vlan_id = 150
+
+    [vlans.blue]
+        vlan_id = 200
+
+[vlan-groups]
+
+    [vlan-groups.greek]
+        description = 'The Greeks!'
+        members = ["alpha", "beta", "omega"]
+
+    [vlan-groups.colors]
+        description = 'Colors are pretty'
+        members = ["red", "green", "blue"]
+
+
+[vlan-assignments]
+
+    [vlan-assignments.leaf01]
+        Ethernet1 = "alpha"         # will be access mode
+        Ethernet2 = "beta"          # will be access mode
+        Ethernet3 = "greek"         # will be trunk mode
+        Ethernet4 = ["beta"]        # will be trunk mode because single item in list
+
+    [vlan-assignments.leaf07]
+        Ethernet1 = ["omega", "red"]
+        Ethernet2 = ['greek', 'blue']
+        Ethernet3 = ['greek', 'colors']

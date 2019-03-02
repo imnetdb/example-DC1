@@ -16,8 +16,7 @@
 
 import sys
 import fire
-import yaml
-from functools import lru_cache
+import toml
 
 from clos_db import TwoStageL3ClosDB
 
@@ -26,15 +25,24 @@ import fabric_ips
 import cabling
 import topology
 import asn_values
+import vlans
+import vlan_assignments
+
 
 class Builder(object):
 
+    build_list = [
+        'topology', 'cabling',
+        'loopback-ips', 'fabric-ips', 'asn-values',
+        'vlans', 'vlan-assignments'
+    ]
+
     def __init__(self):
-        self.config = yaml.load(open('config.yml'))
+        self.config = toml.load(open('config.toml'))
         self.name = self.config['name']
         self.db = TwoStageL3ClosDB(db_name=self.name, password='admin123')
 
-    def end_quietly(self):
+    def quiet(self):
         return ''
 
     def reset(self):
@@ -63,8 +71,19 @@ class Builder(object):
         asn_values.ensure(clos=self)
         return self
 
+    def vlans(self):
+        vlans.ensure(self.db, self.config)
+        return self
+
+    def vlan_assignments(self):
+        vlan_assignments.ensure(self.db, self.config)
+        return self
 
 
 if __name__ == "__main__":
-    sys.argv.append('end_quietly')
+
+    if len(sys.argv) == 1:      # no specific build options, so build the complete list
+        sys.argv.extend(Builder.build_list)
+
+    sys.argv.append('quiet')
     fire.Fire(Builder)

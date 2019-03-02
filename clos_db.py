@@ -12,7 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-import yaml
+import toml
 from imnetdb import IMNetDB
 
 __all__ = ['TwoStageL3ClosDB']
@@ -38,5 +38,6 @@ class TwoStageL3ClosDB(IMNetDB):
 
 
 def get_clos_db():
-    config = yaml.load(open('config.yml'))
+    config = toml.load(open('config.toml'))
     return TwoStageL3ClosDB(db_name=config['name'], password='admin123')
+

@@ -22,8 +22,8 @@ import querys
 
 
 def _populate_pools(clos):
-    spine_range = clos.config['asn_spine_range']
-    leaf_range = clos.config['asn_leaf_range']
+    spine_range = clos.config['asn-values']['spine-range']
+    leaf_range = clos.config['asn-values']['leaf-range']
 
     clos.db.asn_pools['leaf'].add_batch(range(leaf_range[0], leaf_range[1] + 1))
     clos.db.asn_pools['spine'].add_batch(range(spine_range[0], spine_range[1] + 1))
