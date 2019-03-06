@@ -1,0 +1,549 @@
+{
+  "device": {
+    "asn": 10,
+    "lo_inet": "12.12.1.1",
+    "name": "spine01",
+    "role": "spine",
+    "spine_id": 1
+  },
+  "device_peers": {
+    "leaf01": {
+      "asn": 64512,
+      "leaf_id": 1,
+      "lo_inet": "12.12.1.3",
+      "peer_id": 0,
+      "rack_id": 1,
+      "role": "leaf"
+    },
+    "leaf02": {
+      "asn": 64512,
+      "leaf_id": 2,
+      "lo_inet": "12.12.1.4",
+      "peer_id": 1,
+      "rack_id": 1,
+      "role": "leaf"
+    },
+    "leaf03": {
+      "asn": 64513,
+      "leaf_id": 3,
+      "lo_inet": "12.12.1.5",
+      "peer_id": 0,
+      "rack_id": 2,
+      "role": "leaf"
+    },
+    "leaf04": {
+      "asn": 64513,
+      "leaf_id": 4,
+      "lo_inet": "12.12.1.6",
+      "peer_id": 1,
+      "rack_id": 2,
+      "role": "leaf"
+    },
+    "leaf05": {
+      "asn": 64514,
+      "leaf_id": 5,
+      "lo_inet": "12.12.1.7",
+      "peer_id": 0,
+      "rack_id": 3,
+      "role": "leaf"
+    },
+    "leaf06": {
+      "asn": 64514,
+      "leaf_id": 6,
+      "lo_inet": "12.12.1.8",
+      "peer_id": 1,
+      "rack_id": 3,
+      "role": "leaf"
+    },
+    "leaf07": {
+      "asn": 64515,
+      "leaf_id": 7,
+      "lo_inet": "12.12.1.9",
+      "peer_id": 0,
+      "rack_id": 4,
+      "role": "leaf"
+    },
+    "leaf08": {
+      "asn": 64515,
+      "leaf_id": 8,
+      "lo_inet": "12.12.1.10",
+      "peer_id": 1,
+      "rack_id": 4,
+      "role": "leaf"
+    },
+    "leaf09": {
+      "asn": 64516,
+      "leaf_id": 9,
+      "lo_inet": "12.12.1.11",
+      "peer_id": 0,
+      "rack_id": 5,
+      "role": "leaf"
+    },
+    "leaf10": {
+      "asn": 64516,
+      "leaf_id": 10,
+      "lo_inet": "12.12.1.12",
+      "peer_id": 1,
+      "rack_id": 5,
+      "role": "leaf"
+    },
+    "leaf11": {
+      "asn": 64517,
+      "leaf_id": 11,
+      "lo_inet": "12.12.1.13",
+      "peer_id": 0,
+      "rack_id": 6,
+      "role": "leaf"
+    },
+    "leaf12": {
+      "asn": 64517,
+      "leaf_id": 12,
+      "lo_inet": "12.12.1.14",
+      "peer_id": 1,
+      "rack_id": 6,
+      "role": "leaf"
+    },
+    "leaf13": {
+      "asn": 64518,
+      "leaf_id": 13,
+      "lo_inet": "12.12.1.15",
+      "peer_id": 0,
+      "rack_id": 7,
+      "role": "leaf"
+    },
+    "leaf14": {
+      "asn": 64518,
+      "leaf_id": 14,
+      "lo_inet": "12.12.1.16",
+      "peer_id": 1,
+      "rack_id": 7,
+      "role": "leaf"
+    },
+    "leaf15": {
+      "asn": 64519,
+      "leaf_id": 15,
+      "lo_inet": "12.12.1.17",
+      "peer_id": 0,
+      "rack_id": 8,
+      "role": "leaf"
+    },
+    "leaf16": {
+      "asn": 64519,
+      "leaf_id": 16,
+      "lo_inet": "12.12.1.18",
+      "peer_id": 1,
+      "rack_id": 8,
+      "role": "leaf"
+    }
+  },
+  "cabling": {
+    "Ethernet1": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf01",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet10": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf10",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet11": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf11",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet12": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf12",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet13": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf13",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet14": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf14",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet15": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf15",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet2": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf02",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet3": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf03",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet4": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf04",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet5": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf05",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet6": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf06",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet7": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf07",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet8": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf08",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet9": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf09",
+        "interface": "Ethernet49"
+      }
+    },
+    "Ethernet16": {
+      "cable": {
+        "role": "leaf-spine"
+      },
+      "remote": {
+        "device": "leaf16",
+        "interface": "Ethernet49"
+      }
+    }
+  },
+  "interfaces": {
+    "Ethernet1": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.1/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet10": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.19/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet11": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.21/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet12": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.23/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet13": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.25/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet14": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.27/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet15": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.29/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet16": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.31/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet17": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet18": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet19": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet2": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.3/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet20": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet21": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet22": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet23": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet24": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet25": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet26": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet27": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet28": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet29": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet3": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.5/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet30": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet31": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    },
+    "Ethernet4": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.7/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet5": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.9/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet6": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.11/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet7": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.13/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet8": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.15/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Ethernet9": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "ipaddrs": [
+        {
+          "name": "12.12.2.17/31",
+          "rt": "global",
+          "version": 4
+        }
+      ]
+    },
+    "Loopback0": {
+      "role": "loopback",
+      "unused": true
+    },
+    "Ethernet32": {
+      "role": "leaf-spine",
+      "speed": 100,
+      "unused": true
+    }
+  },
+  "lags": {},
+  "vlans": {}
+}

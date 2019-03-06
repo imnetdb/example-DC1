@@ -47,12 +47,12 @@ architectural-decisions = [
     [vlans.alpha]
         description = "this is alpha"
         vlan_id = 10
-        ip_addr = "1.1.1.1/24"
+        ip_gateway = "1.1.1.1"
 
     [vlans.beta]
         description = "this is beta"
         vlan_id = 20
-        ip_addr = "1.2.1.1/24"
+        ip_gateway = "1.2.1.1"
 
     [vlans.omega]
         description = "this is omega"

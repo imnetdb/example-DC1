@@ -1,0 +1,23 @@
+# experimenting .... not in use ....
+
+[vlans]
+
+    [vlans.leaf07.interfaces]
+        Ethernet1 = ["omega", "red"]
+        Ethernet2 = ['greek', 'blue']
+        Ethernet3 = ['greek', 'colors']
+
+    [vlans.leaf07.ip-assignments]
+        alpha = "1.1.1.2/24"
+        beta = "1.2.1.2/24"
+
+    [vlans.leaf01.interfaces]
+        Ethernet1 = "alpha"         # will be access mode
+        Ethernet2 = "beta"          # will be access mode
+        Ethernet3 = "greek"         # will be trunk mode
+        Ethernet4 = ["beta"]        # will be trunk mode because single item in list
+
+    [vlans.leaf01.ip-assignments]
+        alpha = "1.1.1.3/24"
+        beta = "1.2.1.4/24"
+

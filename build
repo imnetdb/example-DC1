@@ -27,6 +27,7 @@ import topology
 import asn_values
 import vlans
 import vlan_assignments
+import hostvars
 
 
 class Builder(object):
@@ -34,7 +35,8 @@ class Builder(object):
     build_list = [
         'topology', 'cabling',
         'loopback-ips', 'fabric-ips', 'asn-values',
-        'vlans', 'vlan-assignments'
+        'vlans', 'vlan-assignments',
+        'hostvars'
     ]
 
     def __init__(self):
@@ -77,6 +79,11 @@ class Builder(object):
 
     def vlan_assignments(self):
         vlan_assignments.ensure(self.db, self.config)
+        return self
+
+    def hostvars(self):
+        for dev in self.db.devices:
+            hostvars.save(dev['name'], self.db)
         return self
 
 
